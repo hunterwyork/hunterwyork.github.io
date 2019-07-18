@@ -1,6 +1,15 @@
 body {
 	font-family: 'Space Mono', 'Helvetica Neue', sans-serif;
 	color: #222222;
+	text-decoration: none;
+}
+
+::selection {
+  background: #bed346; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #bed346; /* Gecko Browsers */
 }
 
 a {
@@ -12,6 +21,15 @@ a:hover {
 	text-decoration: underline;
 	color: #bed346;
 }
+
+a::selection {
+	color: #222222;
+}
+
+a::-moz-selection {
+	color: #222222;
+}
+
 
 .main-container {
 	height: 100%;
@@ -27,7 +45,8 @@ a:hover {
 }
 
 .main-blurb {
-	padding-bottom: 24px;
+	padding-bottom: 12px;
+	padding-top: 12px;
 	width: 60%;
  	margin: 0 auto;
 	text-align: center;
