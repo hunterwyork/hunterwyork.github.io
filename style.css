@@ -2,6 +2,7 @@ body {
 	font-family: 'Space Mono', 'Helvetica Neue', sans-serif;
 	color: #222222;
 	text-decoration: none;
+	background-color: #fff1e9;
 }
 
 ::selection {
@@ -63,6 +64,12 @@ a::-moz-selection {
 	min-height: 50px;
 	min-width: 50px;
 	text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+	display: inline;
+	margin: 0 auto;
+	width: auto;
 }
 
 .link {
