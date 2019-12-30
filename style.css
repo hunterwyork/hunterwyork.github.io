@@ -54,7 +54,7 @@ a::-moz-selection {
 }
 
 .main-img {
-	margin-bottom: 24px;
+	margin-bottom: 0px;
 	text-align: center;
 }
 
@@ -71,8 +71,27 @@ a::-moz-selection {
 	margin: 0 auto;
 	width: auto;
 }
-
-.link {
+.links-container {
+	justify-content: center;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 15rem 15rem;
+    grid-template-rows: 4rem 4rem;
+    margin-bottom: 12px;
+}
+.link1 {
+	font-weight: bold;
+	text-align: center;
+}
+.link2 {
+	font-weight: bold;
+	text-align: center;
+}
+.link3 {
+	font-weight: bold;
+	text-align: center;
+}
+.link4 {
 	font-weight: bold;
 	text-align: center;
 }
