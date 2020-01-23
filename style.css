@@ -75,6 +75,7 @@ a::-moz-selection {
 	justify-content: center;
 	align-items: center;
 	display: grid;
+	width: 100%;
 	grid-template-columns: 15rem 15rem;
     grid-template-rows: 4rem 4rem;
     margin-bottom: 12px;
