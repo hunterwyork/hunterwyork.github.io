@@ -78,8 +78,8 @@ a::-moz-selection {
 	display: grid;
 	width:70%;
 	margin: 0 auto;
-	grid-template-columns: 15rem 15rem;
-    grid-template-rows: 4rem 4rem;
+	grid-template-columns: 15rem;
+    grid-template-rows: 2rem 2rem 3rem 2rem;
     margin-bottom: 12px;
 }
 .link1 {
