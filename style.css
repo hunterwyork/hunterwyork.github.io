@@ -48,7 +48,7 @@ a::-moz-selection {
 .main-blurb {
 	padding-bottom: 12px;
 	padding-top: 12px;
-	width: 60%;
+	width: 80%;
  	margin: 0 auto;
 	text-align: center;
 }
@@ -72,10 +72,12 @@ a::-moz-selection {
 	width: auto;
 }
 .links-container {
+
 	justify-content: center;
 	align-items: center;
 	display: grid;
-	width: 100%;
+	width:70%;
+	margin: 0 auto;
 	grid-template-columns: 15rem 15rem;
     grid-template-rows: 4rem 4rem;
     margin-bottom: 12px;
