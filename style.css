@@ -59,17 +59,15 @@ a::-moz-selection {
 }
 
 .main-img img {
-	max-height: 300px;
-	max-width: 300px;
-	min-height: 50px;
-	min-width: 50px;
+	object-fit: cover;
+	height: 200px;
+	width: 200px;
 	text-align: center;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
 	display: inline;
 	margin: 0 auto;
-	width: auto;
 }
 .links-container {
 
@@ -78,8 +76,8 @@ a::-moz-selection {
 	display: grid;
 	width:70%;
 	margin: 0 auto;
-	grid-template-columns: 15rem;
-    grid-template-rows: 2rem 2rem 3rem 2rem;
+	grid-template-columns: 18rem;
+    grid-template-rows: 2rem 2rem 2rem 3rem 2rem;
     margin-bottom: 12px;
 }
 .link1 {
@@ -98,6 +96,11 @@ a::-moz-selection {
 	font-weight: bold;
 	text-align: center;
 }
+.link5 {
+	font-weight: bold;
+	text-align: center;
+}
+
 
 .social_media {
 	alignment-baseline: center;

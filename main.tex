@@ -1,0 +1,211 @@
+\title{cv1}
+\author{hunterwyork}
+\date{June 13 2020}
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\usepackage{apacite}
+\usepackage{multibbl}
+\usepackage{xstring}
+\usepackage{hyperref}
+\usepackage[document]{ragged2e}
+
+% add command to highlight my name in all citations
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\def\myname{Hunter York}
+\begin{document}
+
+
+% Header --------------------------------
+
+
+\begin{flushright}
+
+\textbf{\Large Hunter Wade York, MPH}\\
+Email : \href{mailto:hyork [at] princeton [dot] edu}{hyork [at] princeton [dot] edu}\\
+\href{http://hunterwyork.com/}{http://www.hunterwyork.com}\\~\\
+Updated: 2020-07-19
+
+\end{flushright}
+
+
+% Education ------------------------------
+
+\section*{Education}
+\begin{itemize}[leftmargin=*, label={}]
+    \item \textbf{Princeton University - Department of Sociology} \hfill August 2020 - Present\\
+    PhD Student\\
+    Office of Population Research Affiliate
+    \item \textbf{University of Washington - Department of Global Health} \hfill August 2017 - June 2020\\
+    MPH - Health Metrics and Evaluation, Advisor: Emmanuela Gakidou\\
+    Thesis: \textit{Geographic and Race/Ethnicity Disparities in Learning Adjusted Years of Education in the United States 2009-2017}\\
+    Trainee in Demography in the Center for Studies in Demography and Ecology, Advisor: Sara Curran
+    \item \textbf{Harvard University} \hfill August 2013 - May 2017\\
+    AB - Human Evolutionary Biology (Music Secondary), Advisor: Max Krasnow (Dept. of Psychology)\\
+    Thesis: \textit{Ethnographic and Perceptual Evidence for an Evolved Function of Music as a Coalition Signaling System}
+\end{itemize}
+
+
+
+% AWARDS AND FELLOWSHIPS ------------------------
+
+\section*{Awards and Fellowships}
+\begin{itemize}[leftmargin=*, label={}]
+
+\item \textbf{CSDE PAA Travel Award}, University of Washington Center for Studies in Demography and Ecology for the Population Association of America annual meeting (2020)  
+
+\item \textbf{Lancet Poster Competition Finalist}, Consortium for Universities in Global Health Annual Conference (2019)
+
+\item \textbf{Graduate Student Travel Award}, University of Washington (2019)
+
+\item \textbf{Dudley House Book Prize}, Harvard (2017)
+
+\item \textbf{Harvard College Research Program Summer Research Award}, Harvard (2016)
+
+\item \textbf{Program for Research in Science and Engineering (PRISE) Summer Research Award}, Harvard (2016) - Declined
+
+\item \textbf{Mindich Service Fellowship}, Center for Public Interest Careers, Harvard (2015)
+
+\end{itemize}
+
+
+% Peer reviewed Publications ------------------------
+
+\newbibliography{pr}
+\bibliographystyle{pr}{hunter4.bst}
+
+
+\nocite{pr}{friedmanMeasuringForecastingProgress2020a}
+\nocite{pr}{foremanForecastingLifeExpectancy2018}
+\nocite{pr}{limMeasuringHumanCapital2018}
+\nocite{pr}{dickerGlobalRegionalNational2018}
+\nocite{pr}{mehrFormFunctionHuman2018}
+\bibliography{pr}{my_cv}{Peer-Reviewed Publications}
+
+
+% other pubs ------------------------
+
+\newbibliography{other}
+\bibliographystyle{other}{hunter4.bst}
+
+\nocite{other}{billandmelindagatesfoundationGoalkeepersReport20182018}
+\nocite{other}{billandmelindagatesfoundationGoalkeepersReport2019}
+\nocite{other}{instituteforhealthmetricsandevaluationHumanCapitalComparison2018}
+\bibliography{other}{my_cv}{Other Publications}
+
+
+% Works in progress ------------------------
+
+\newbibliography{wip}
+\bibliographystyle{wip}{hunter4.bst}
+
+\nocite{wip}{yorkWithinCohortBetweenCohortEducational2020}
+
+\bibliography{wip}{my_cv}{Works in Progress}
+
+% Conference Presentations ------------------------
+
+\newbibliography{pres}
+\bibliographystyle{pres}{hunter4.bst}
+
+\nocite{pres}{yorkImpactMaternalEducation2019}
+\nocite{pres}{mehrFormFunctionHuman2018a}
+
+\bibliography{pres}{my_cv}{Conference Presentations}
+
+% Conference Posters ------------------------
+
+\newbibliography{post}
+\bibliographystyle{post}{hunter4.bst}
+
+\nocite{post}{yorkWithinCohortBetweenCohortEducational2020}
+\nocite{post}{yorkTrendsEducationInequality2019}
+\nocite{post}{yorkImpactMaternalEducation2019a}
+\nocite{post}{mehrFormFunctionHuman2018b}
+
+
+\bibliography{post}{my_cv}{Conference Posters}
+
+% invited Talks ------------------------
+
+\newbibliography{talks}
+\bibliographystyle{talks}{hunter4.bst}
+
+\nocite{talks}{yorkEstimatingForecastingPopulationLevel2020}
+\nocite{talks}{yorkInnovationsModellingDistributions2020}
+
+\bibliography{talks}{my_cv}{Invited Talks}
+
+% Other Research Experience ------------------------
+
+\section*{Other Research Experience}
+\begin{itemize}[leftmargin=*, label={}]
+    \item \textbf{Post-Bachelor Fellow, Institute for Health Metrics and Evaluation, Seattle, WA} \hfill 2017 - 2020\\
+    Socio-economic exposures and determinants team\\
+    Lead researcher on educational attainment and inequality\\
+    PI: Dr. Chris Murray, Advisor: Dr. Emmanuela Gakidou
+ \item \textbf{Affiliate, Centre for Global Health Inequality Research (CHAIN), NTNU, Norway} \hfill 2019 - Present\\
+ Collaborator on several research projects relating socioeconomic indicators, inequality, and
+health, including an attempt to quantify the total burden of health around the world due to
+educational inequalities.\\
+PI: Dr. Terje Eikemo
+ \item \textbf{Visiting Fellow, Ethiopian Public Health Institute, Addis Ababa} \hfill Sept. 2019\\
+ National Data Management Center Fellow\\
+ Created a 28-page training guide for incoming class of local post-doc and graduate fellows to be
+housed at the NDMC. It included units on geospatial analyses, risk modeling, risk exposure
+distribution assessment, and basic data manipulation using in-house data.\\
+PI: Dr. Awoke Temesgen
+ \item \textbf{Research Assistant, the Natural History of Song Project, Harvard University} \hfill  2015 - 2017\\
+ Ethnography and discography projects contributor\\
+ Honors Thesis: \textit{Ethnographic and Perceptual Evidence for an Evolved Function of Music as a
+Coalition Signaling System}\\
+PI: Dr. Max Krasnow, Advisor: Dr. Sam Mehr
+
+\end{itemize}
+
+% languages ----------------------------
+
+
+\section*{Languages}
+\begin{itemize}[leftmargin=*, label={}]
+
+\item English - Native Fluency  
+\item French - Intermediate Working Proficiency  
+\item Spanish - Limited Proficiency
+
+\end{itemize}
+
+% Research Skills ----------------------
+
+
+\section*{Research Skills}
+\begin{itemize}[leftmargin=*, label={}]
+
+\item \textbf{Programming}: R, Python, Git, Bash 
+\item \textbf{Analytical}: Demographic methods, quantitative epidemiology, qualitative and quantitative program and policy evaluation, geospatial statistics, human subjects laboratory testing, survey design.
+
+\end{itemize}
+
+\end{document}
