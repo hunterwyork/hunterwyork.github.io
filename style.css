@@ -6,11 +6,11 @@ body {
 }
 
 ::selection {
-  background: #bed346; /* WebKit/Blink Browsers */
+  background: #94b298; /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-  background: #bed346; /* Gecko Browsers */
+  background: #94b298; /* Gecko Browsers */
 }
 
 a {
@@ -20,7 +20,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
-	color: #bed346;
+	color: #94b298;
 }
 
 a::selection {
@@ -52,6 +52,15 @@ a::-moz-selection {
  	margin: 0 auto;
 	text-align: center;
 }
+.footer {
+	padding-bottom: 12px;
+	padding-top: 12px;
+	width: 80%;
+ 	margin: 0 auto;
+	text-align: center;
+	font-size: 9px;
+	color: #94b298;
+}
 
 .main-img {
 	margin-bottom: 0px;
@@ -60,8 +69,8 @@ a::-moz-selection {
 
 .main-img img {
 	object-fit: cover;
-	height: 200px;
-	width: 200px;
+	height: 300px;
+	width: 300px;
 	text-align: center;
     position: relative;
     overflow: hidden;
