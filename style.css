@@ -13,23 +13,63 @@ body {
   background: #94b298; /* Gecko Browsers */
 }
 
-a {
+.c1 {
 	text-decoration: none;
 	color: inherit;
 }
 
-a:hover {
+.c1:hover {
 	text-decoration: underline;
 	color: #94b298;
 }
 
-a::selection {
+.c1::selection {
 	color: #222222;
 }
 
-a::-moz-selection {
+.c1::-moz-selection {
 	color: #222222;
 }
+
+.c2 {
+	text-decoration: none;
+	color: inherit;
+}
+
+.c2:hover {
+	text-decoration: underline;
+	color: #222222;
+}
+
+.c2::selection {
+	color: #222222;
+	background: #94b298;
+}
+
+.c2::-moz-selection {
+	color: #222222;
+	background: #94b298;
+}
+
+.footer {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+.footer::selection {
+	color: #222222;
+	background: #94b298;
+}
+
+.footer::-moz-selection {
+	color: #222222;
+	background: #94b298;
+}
+
+
+
+
 
 
 .main-container {
@@ -53,8 +93,8 @@ a::-moz-selection {
 	text-align: center;
 }
 .footer {
-	padding-bottom: 12px;
-	padding-top: 12px;
+	padding-bottom: 24px;
+	padding-top: 24px;
 	width: 80%;
  	margin: 0 auto;
 	text-align: center;
@@ -115,4 +155,16 @@ a::-moz-selection {
 .social_media {
 	alignment-baseline: center;
 	text-align: center;
+}
+.social_media:hover {
+	text-decoration: underline;
+	color: #94b298;
+}
+
+.social_media::selection {
+	color: #222222;
+}
+
+.social_media::-moz-selection {
+	color: #222222;
 }
