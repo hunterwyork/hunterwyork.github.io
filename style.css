@@ -1,170 +1,198 @@
 body {
-	font-family: 'Space Mono', 'Helvetica Neue', sans-serif;
-	color: #222222;
-	text-decoration: none;
-	background-color: #fff1e9;
-}
-
-::selection {
-  background: #94b298; /* WebKit/Blink Browsers */
-}
-
-::-moz-selection {
-  background: #94b298; /* Gecko Browsers */
-}
-
-.c1 {
-	text-decoration: none;
-	color: inherit;
-}
-
-.c1:hover {
-	text-decoration: underline;
-	color: #94b298;
-}
-
-.c1::selection {
-	color: #222222;
-}
-
-.c1::-moz-selection {
-	color: #222222;
-}
-
-.c2 {
-	text-decoration: none;
-	color: inherit;
-}
-
-.c2:hover {
-	text-decoration: underline;
-	color: #222222;
-}
-
-.c2::selection {
-	color: #222222;
-	background: #94b298;
-}
-
-.c2::-moz-selection {
-	color: #222222;
-	background: #94b298;
-}
-
-.footer {
-	text-decoration: none;
-	color: inherit;
-}
-
-
-.footer::selection {
-	color: #222222;
-	background: #94b298;
-}
-
-.footer::-moz-selection {
-	color: #222222;
-	background: #94b298;
+    font-family: 'Space Mono', 'Helvetica Neue', sans-serif;
+    color: #222222;
+    background-color: #fff1e9;
+    margin: 0;
+    padding: 0;
 }
 
 
 
-
-
-
-.main-container {
-	height: 100%;
-	width: 100%;
-	text-align: : center;
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.head-title {
-	font-size: 36px;
-	font-weight: 900;
-	margin-bottom: 24px;
-	text-align: center;
-}
 
-.main-blurb {
-	padding-bottom: 12px;
-	padding-top: 12px;
-	width: 80%;
- 	margin: 0 auto;
-	text-align: center;
-}
-.footer {
-	padding-bottom: 24px;
-	padding-top: 24px;
-	width: 80%;
- 	margin: 0 auto;
-	text-align: center;
-	font-size: 9px;
-	color: #94b298;
-}
 
-.main-img {
-	margin-bottom: 0px;
-	text-align: center;
+.sidebar {
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+    border-right: 1px solid #ddd;
 }
 
 .main-img img {
-	object-fit: cover;
-	height: 300px;
-	width: 300px;
-	text-align: center;
-    position: relative;
-    overflow: hidden;
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
-	display: inline;
-	margin: 0 auto;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 20px;
+}
 
-	justify-content: center;
-	align-items: center;
-	display: grid;
-	width:70%;
-	margin: 0 auto;
-	grid-template-columns: 18rem;
-    grid-template-rows: 2rem 2rem 2rem 2rem 2rem;
-    margin-bottom: 12px;
+.links-container a {
+    padding: 10px;
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+    background-color: #fff1e9;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: left;
+    width: 100%; /* Makes each link fill the container */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
-.link1 {
-	font-weight: bold;
-	text-align: center;
-}
-.link2 {
-	font-weight: bold;
-	text-align: center;
-}
-.link3 {
-	font-weight: bold;
-	text-align: center;
-}
-.link4 {
-	font-weight: bold;
-	text-align: center;
-}
-.link5 {
-	font-weight: bold;
-	text-align: center;
+
+.links-container a:hover {
+    background-color: #94b298;
+    color: #fff1e9;
 }
 
 
+
+.content {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.head-title {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.main-blurb,
+.works-in-progress {
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.main-blurb h2,
+.works-in-progress h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.main-blurb p,
+.works-in-progress p,
+.works-in-progress ul {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.works-in-progress ul {
+    padding-left: 20px;
+}
+
+.footer {
+    text-align: left;
+    font-size: 12px;
+    color: #94b298;
+    margin-top: 40px;
+}
 
 .social_media {
-	alignment-baseline: center;
-	text-align: center;
-}
-.social_media:hover {
-	text-decoration: underline;
-	color: #94b298;
+    margin-top: 20px;
+    text-align: left;
 }
 
-.social_media::selection {
-	color: #222222;
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        max-width: none;
+        border-right: none;
+        padding: 10px;
+    }
+
+    .content {
+        padding-left: 0;
+    }
 }
 
-.social_media::-moz-selection {
-	color: #222222;
+/* Adjust layout for medium screens (e.g., tablets like iPad) */
+@media (min-width: 801px) and (max-width: 1024px) {
+    .sidebar {
+        max-width: 300px; /* Limit the sidebar width to avoid excessive stretching */
+        padding: 15px;
+    }
+
+    .links-container {
+        gap: 15px; /* Slight gap for breathing room */
+    }
+
+    .links-container a {
+        padding: 10px 8px; /* Adjust padding to prevent text overflow */
+        font-size: 14px; /* Slightly reduce font size to fit longer text */
+        text-align: center;
+        width: 100%; /* Make buttons fill the sidebar width */
+        white-space: normal; /* Allow text to wrap within the button */
+        word-wrap: break-word; /* Break long words to fit within button boundaries */
+        box-sizing: border-box; /* Ensure padding doesn’t expand button width */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+        align-items: center; /* Center align all content */
+    }
+
+    .sidebar {
+        max-width: 100%; /* Allow the sidebar to take full width */
+        padding: 15px; /* Reduce padding for a compact layout */
+        text-align: center; /* Center align text in sidebar */
+    }
+
+    .links-container {
+        align-items: center; /* Center align the links */
+        gap: 20px; /* Maintain consistent spacing */
+    }
+
+    .links-container a {
+        padding: 12px; /* Ensure buttons are touch-friendly */
+        font-size: 14px; /* Adjust font size for small screens */
+        text-align: center; /* Center-align button text */
+        width: auto; /* Let buttons fit their content naturally */
+    }
+
+    .content {
+        padding: 0 10px; /* Add padding for better spacing */
+        max-width: 90%; /* Constrain content width for readability */
+        text-align: center; /* Center-align content text */
+    }
+
+    .head-title {
+        font-size: 28px; /* Adjust font size for small screens */
+    }
+
+    .main-blurb, .works-in-progress {
+        margin-bottom: 20px; /* Add spacing between sections */
+    }
+
+    .main-blurb h2, .works-in-progress h2 {
+        font-size: 24px; /* Slightly smaller section titles */
+    }
+
+    .main-blurb p, .works-in-progress li {
+        font-size: 14px; /* Smaller font for readability */
+        line-height: 1.6; /* Maintain line spacing */
+    }
 }
