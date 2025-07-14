@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Some Photos</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Space Mono', monospace;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #333;
+        }
+        .album-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        .album-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1em;
+        }
+        .photo-grid a img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .photo-grid a img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="album-container">
+        <h1 class="album-title">Some Photos</h1>
+        <div class="photo-grid">
+            <!-- 13 Images -->
+            <a href="photos/photo1.jpg" data-lightbox="album" data-title="Photo 1">
+                <img src="photos/photo1.jpg" alt="Ring-collared dove on our balcony in paris. June 2024.">
+            </a>
+            <a href="photos/photo2.jpg" data-lightbox="album" data-title="Photo 2">
+                <img src="photos/photo2.jpg" alt="Dew on a spider web on some coastal sagebrush. August 2023.">
+            </a>
+            <a href="photos/photo3.jpg" data-lightbox="album" data-title="Photo 3">
+                <img src="photos/photo3.jpg" alt="An arriving metro train in NY.">
+            </a>
+            <a href="photos/photo4.jpg" data-lightbox="album" data-title="Photo 4">
+                <img src="photos/photo4.jpg" alt="Milwaukee, WI.">
+            </a>
+            <a href="photos/photo5.jpg" data-lightbox="album" data-title="Photo 5">
+                <img src="photos/photo5.jpg" alt="Posters in Avignon. July 2024.">
+            </a>
+            <a href="photos/photo6.jpg" data-lightbox="album" data-title="Photo 6">
+                <img src="photos/photo6.jpg" alt="Palais des Papes. July 2024.">
+            </a>
+            <a href="photos/photo7.jpg" data-lightbox="album" data-title="Photo 7">
+                <img src="photos/photo7.jpg" alt="Bainbridge Island ferry (Seattle). August 2023.">
+            </a>
+            <a href="photos/photo8.jpg" data-lightbox="album" data-title="Photo 8">
+                <img src="photos/photo8.jpg" alt="Giverny. June 2023.">
+            </a>
+            <a href="photos/photo9.jpg" data-lightbox="album" data-title="Photo 9">
+                <img src="photos/photo9.jpg" alt="Giverny. June 2023.">
+            </a>
+            <a href="photos/photo10.jpg" data-lightbox="album" data-title="Photo 10">
+                <img src="photos/photo10.jpg" alt="Nashville, TN.">
+            </a>
+            <a href="photos/photo11.jpg" data-lightbox="album" data-title="Photo 11">
+                <img src="photos/photo11.jpg" alt="Cloisters.">
+            </a>
+            <a href="photos/photo12.jpg" data-lightbox="album" data-title="Photo 12">
+                <img src="photos/photo12.jpg" alt="Blois, France. June 2022.">
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>

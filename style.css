@@ -80,8 +80,33 @@ body {
     text-align: left;
 }
 
+/* Global link styles */
+a {
+    text-decoration: none;
+    color: #94b298;
+    font-weight: bold;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    padding: 0.15em 0.25em;
+    border-radius: 4px;
+}
+
+/* Hover state */
+a:hover {
+    color: #fff1e9;
+    background-color: #94b298;
+}
+
 .main-blurb h2,
 .works-in-progress h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+
+.main-blurb h2,
+.works-in-progress h2, 
+.citation h2 {
     font-size: 28px;
     margin-bottom: 10px;
     text-align: left;
@@ -187,9 +212,11 @@ body {
         margin-bottom: 20px; /* Add spacing between sections */
     }
 
-    .main-blurb h2, .works-in-progress h2 {
+    .main-blurb h2, .works-in-progress h2, .citation h2 {
         font-size: 24px; /* Slightly smaller section titles */
     }
+
+
 
     .main-blurb p, .works-in-progress li {
         font-size: 14px; /* Smaller font for readability */
