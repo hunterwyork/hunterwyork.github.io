@@ -1,225 +1,310 @@
+/* ---------- Tokens ---------- */
+:root {
+    --bg:        #fff1e9;
+    --ink:       #1f1f1f;   /* body text */
+    --ink-soft:  #5a5350;   /* secondary text, footnotes */
+    --accent:    #3d6b4a;   /* links: 5.6:1 on --bg, passes WCAG AA */
+    --accent-lt: #94b298;   /* decorative only, never text-on-bg */
+    --rule:      #e3d5c8;
+
+    --measure:   64ch;      /* max line length for prose */
+}
+
+/* ---------- Base ---------- */
+html { -webkit-text-size-adjust: 100%; }
+
 body {
-    font-family: 'Space Mono', 'Helvetica Neue', sans-serif;
-    color: #222222;
-    background-color: #fff1e9;
+    font-family: 'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    /* Monospace runs wide; a touch of negative tracking tightens the line
+       without changing the look. */
+    letter-spacing: -0.012em;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink);
+    background-color: var(--bg);
     margin: 0;
     padding: 0;
 }
 
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+.skip-link:focus {
+    left: 12px;
+    top: 12px;
+    z-index: 10;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 10px 14px;
+}
 
-
+/* ---------- Layout ---------- */
 .container {
     display: flex;
-    max-width: 1200px;
+    gap: 48px;
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 48px 24px;
 }
-
-
 
 .sidebar {
-    flex: 1;
-    max-width: 300px;
-    padding: 20px;
-    border-right: 1px solid #ddd;
+    flex: 0 0 260px;
+    border-right: 1px solid var(--rule);
+    padding-right: 32px;
+    align-self: flex-start;
+    position: sticky;
+    top: 48px;
 }
 
+.content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* Cap the measure on everything that is read as prose. */
+.content p,
+.content li {
+    max-width: var(--measure);
+}
+
+/* ---------- Sidebar ---------- */
 .main-img img {
     object-fit: cover;
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
 }
 
 .links-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 25px;
-    margin-bottom: 20px;
+    align-items: stretch;
+    gap: 2px;
 }
 
 .links-container a {
-    padding: 10px;
-    font-weight: bold;
-    color: inherit;
+    display: block;
+    font-size: 15px;
+    letter-spacing: 0;
+    font-weight: 700;
+    color: var(--ink);
     text-decoration: none;
-    background-color: #fff1e9;
-    border: none;
+    background: none;
+    padding: 9px 10px;
     border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-    text-align: left;
-    width: 100%; /* Makes each link fill the container */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    box-sizing: border-box;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.links-container a:hover {
-    background-color: #94b298;
-    color: #fff1e9;
+.links-container a:hover,
+.links-container a:focus-visible {
+    background-color: var(--accent);
+    color: var(--bg);
 }
 
-
-
-.content {
-    flex: 2;
-    padding-left: 20px;
+/* ---------- Masthead / affiliation ---------- */
+.masthead {
+    margin-bottom: 33px;
 }
 
 .head-title {
-    font-size: 36px;
-    font-weight: 900;
-    margin-bottom: 24px;
-    text-align: left;
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin: 0 0 14px;
 }
 
-.main-blurb,
-.works-in-progress {
-    margin-bottom: 24px;
-    text-align: left;
+.affiliation-role {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--accent);
+    margin: 0 0 4px;
+    max-width: none;
 }
 
-/* Global link styles */
-a {
-    text-decoration: none;
-    color: #94b298;
-    font-weight: bold;
-    transition: color 0.2s ease, background-color 0.2s ease;
-    padding: 0.15em 0.25em;
-    border-radius: 4px;
+.affiliation-date {
+    color: var(--ink-soft);
+    white-space: nowrap;
 }
 
-/* Hover state */
-a:hover {
-    color: #fff1e9;
-    background-color: #94b298;
-}
-
-.main-blurb h2,
-.works-in-progress h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-
-.main-blurb h2,
-.works-in-progress h2, 
-.citation h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-.main-blurb p,
-.works-in-progress p,
-.works-in-progress ul {
-    font-size: 16px;
+.affiliation-org {
+    font-size: 15px;
     line-height: 1.6;
-    text-align: left;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: none;
 }
 
-.works-in-progress ul {
-    padding-left: 20px;
-}
-
-.footer {
-    text-align: left;
+.affiliation-tag {
+    display: inline-block;
     font-size: 12px;
-    color: #94b298;
-    margin-top: 40px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent-lt);
+    border-radius: 999px;
+    padding: 2px 10px;
+    margin-left: 8px;
+    white-space: nowrap;
+    vertical-align: 2px;
 }
 
-.social_media {
-    margin-top: 20px;
-    text-align: left;
+/* ---------- Sections & headings ---------- */
+section {
+    margin-bottom: 52px;
 }
 
+h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+}
+
+.h2-sub {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+    margin-top: 4px;
+}
+
+p { margin: 0 0 1.1em; }
+p:last-child { margin-bottom: 0; }
+
+/* ---------- Links ---------- */
+a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--accent-lt);
+    border-radius: 3px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+a:hover {
+    color: var(--bg);
+    background-color: var(--accent);
+    text-decoration-color: transparent;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ---------- Citations ---------- */
+.cite-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cite-list li {
+    /* Hanging indent, done in CSS instead of inline styles. */
+    padding-left: 2.2em;
+    text-indent: -2.2em;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 1.2em;
+}
+
+.cite-list li:last-child { margin-bottom: 0; }
+
+/* DOIs are long and unbreakable; let them wrap rather than overflow. */
+.cite-list a { overflow-wrap: anywhere; }
+
+.footnote {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 18px;
+}
+
+/* ---------- Papers (under review / in progress) ---------- */
+.paper-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.paper-list > li {
+    margin-bottom: 32px;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent-lt);
+    max-width: none;
+}
+
+.paper-list > li:last-child { margin-bottom: 0; }
+
+.paper-title {
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 0.6em;
+    color: var(--ink);
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+    .container { gap: 32px; }
+    .sidebar { flex-basis: 220px; padding-right: 24px; }
+    .links-container a { font-size: 14px; }
+}
+
+/* ---------- Stacked / mobile ---------- */
 @media (max-width: 800px) {
     .container {
         flex-direction: column;
+        gap: 32px;
+        padding: 32px 20px;
     }
 
     .sidebar {
-        max-width: none;
+        position: static;
+        flex-basis: auto;
         border-right: none;
-        padding: 10px;
+        border-bottom: 1px solid var(--rule);
+        padding: 0 0 24px;
     }
 
-    .content {
-        padding-left: 0;
-    }
-}
-
-/* Adjust layout for medium screens (e.g., tablets like iPad) */
-@media (min-width: 801px) and (max-width: 1024px) {
-    .sidebar {
-        max-width: 300px; /* Limit the sidebar width to avoid excessive stretching */
-        padding: 15px;
+    .main-img img {
+        height: 120px;
+        width: 120px;
+        margin-bottom: 20px;
     }
 
     .links-container {
-        gap: 15px; /* Slight gap for breathing room */
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
     }
 
     .links-container a {
-        padding: 10px 8px; /* Adjust padding to prevent text overflow */
-        font-size: 14px; /* Slightly reduce font size to fit longer text */
-        text-align: center;
-        width: 100%; /* Make buttons fill the sidebar width */
-        white-space: normal; /* Allow text to wrap within the button */
-        word-wrap: break-word; /* Break long words to fit within button boundaries */
-        box-sizing: border-box; /* Ensure padding doesn’t expand button width */
+        border: 1px solid var(--rule);
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-        flex-direction: column; /* Stack sidebar and content vertically */
-        align-items: center; /* Center align all content */
-    }
-
-    .sidebar {
-        max-width: 100%; /* Allow the sidebar to take full width */
-        padding: 15px; /* Reduce padding for a compact layout */
-        text-align: center; /* Center align text in sidebar */
-    }
-
-    .links-container {
-        align-items: center; /* Center align the links */
-        gap: 20px; /* Maintain consistent spacing */
-    }
-
-    .links-container a {
-        padding: 12px; /* Ensure buttons are touch-friendly */
-        font-size: 14px; /* Adjust font size for small screens */
-        text-align: center; /* Center-align button text */
-        width: auto; /* Let buttons fit their content naturally */
-    }
-
-    .content {
-        padding: 0 10px; /* Add padding for better spacing */
-        max-width: 90%; /* Constrain content width for readability */
-        text-align: center; /* Center-align content text */
-    }
-
-    .head-title {
-        font-size: 28px; /* Adjust font size for small screens */
-    }
-
-    .main-blurb, .works-in-progress {
-        margin-bottom: 20px; /* Add spacing between sections */
-    }
-
-    .main-blurb h2, .works-in-progress h2, .citation h2 {
-        font-size: 24px; /* Slightly smaller section titles */
-    }
-
-
-
-    .main-blurb p, .works-in-progress li {
-        font-size: 14px; /* Smaller font for readability */
-        line-height: 1.6; /* Maintain line spacing */
-    }
+    body { font-size: 16px; line-height: 1.7; }
+    /* Left-aligned, not centered: centered text is much harder to read
+       in long paragraphs. */
+    .content { text-align: left; }
+    .head-title { font-size: 28px; }
+    h2 { font-size: 19px; }
+    .affiliation-role { font-size: 16px; }
+    .affiliation-tag { margin-left: 0; margin-top: 6px; }
+    .cite-list li { font-size: 14px; padding-left: 0; text-indent: 0; }
+    section { margin-bottom: 40px; }
 }
